@@ -71,7 +71,18 @@ div.main img {
 div.directions {
   position: absolute;
   top: 810px;
-  background-color: #F1EEDB;
+  background-color: #fcfbf2;
   width: 100%;
   font-family: 'Oswald';
+}
+
+/* FAQS */
+
+div.faqs {
+  position: absolute;
+  top: 1465px;
+  background-color: #fcf9e8;
+  width: 100%;
+  font-family: 'Oswald';
+  border-top: 1px solid black;
 }
