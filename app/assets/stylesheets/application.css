@@ -14,43 +14,42 @@
  *= require_self
  */
 
-/* BACKGROUND IMAGE*/
-
-img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-  
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-  
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  /* Set up order */
-  z-index: -1;
+body {
+  margin: 0;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-      /* Set up order */
-    z-index: -1;
-  }
+/* COLORS */
+/*#ECE6D7
+#F1EEDB
+#ACB8AE
+#739657
+#9A805D
+#5F7947
+#FAF8DE*/
+
+/* MAIN PAGE */
+
+div.main {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+div.main img {
+  background-size: cover;
+  max-width: 100%;
 }
 
 /* NAVBAR */
 
 .navbar {
-  float: right;
-  padding: 1.5% 10%;
+  position: fixed;
+  padding: 1.5%;
+  padding-left: 60%;
   color: grey;
   font-family: 'Oswald';
   font-size: 2em;
+  z-index: 1;
 }
 
 .navbar td {
@@ -65,4 +64,14 @@ img.bg {
 .navbar a:hover span { 
     text-decoration: none;
     border-bottom: 3px solid #168412; 
+}
+
+/* DIRECTIONS */
+
+div.directions {
+  position: absolute;
+  top: 810px;
+  background-color: #F1EEDB;
+  width: 100%;
+  font-family: 'Oswald';
 }
