@@ -52,7 +52,11 @@ div.main img {
   z-index: 1;
 }
 
-.navbar td {
+.navbar table {
+  background-color: rgba(237, 235, 225, 0.5);
+}
+
+.navbar td.padding {
   padding-right: 40px;
 }
 
