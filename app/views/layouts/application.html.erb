@@ -6,26 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/b646bad7c7.js"></script>
   </head>
 
   <body>
-
-  <div class="navbar">
-    <table>
-      <tr>
-        <td class="padding">
-          <a href="/"><span>HOME</span></a>
-        </td>
-        <td class="padding">
-          <a href="#directions"><span>DIRECTIONS</span></a>
-        </td>
-        <td>
-          <a href="#faqs"><span>FAQS</span></a>
-        </td>
-      </tr>
-    </table>
-  </div>
-
     <%= yield %>
   </body>
 </html>

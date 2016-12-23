@@ -1,92 +1,196 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
-body {
+html, body, ul {
   margin: 0;
 }
 
-/* COLORS */
-/*#ECE6D7
-#F1EEDB
-#ACB8AE
-#739657
-#9A805D
-#5F7947
-#FAF8DE*/
+/* MAIN SECTION */
 
-/* MAIN PAGE */
-
-div.main {
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-div.main img {
+main {
+  min-height: 100vh;
+  background-image: url("/assets/bg-lg.jpg");
   background-size: cover;
-  max-width: 100%;
 }
 
-/* NAVBAR */
-
-.navbar {
-  position: fixed;
-  padding: 1.5%;
-  padding-left: 60%;
-  color: grey;
-  font-family: 'Oswald';
-  font-size: 2em;
-  z-index: 1;
+@media only screen and (max-width: 550px) {
+    main {
+      background-image: url("/assets/bg-center.jpg");
+    }
 }
 
-.navbar table {
-  background-color: rgba(237, 235, 225, 0.5);
+/* MAIN NAVIGATION */
+
+.main-navigation {
+  position: absolute;
+  top: 5.5%;
+  right: 2.5%;
+  list-style: none;
+  padding: 0;
 }
 
-.navbar td.padding {
-  padding-right: 40px;
+.main-navigation li {
+  display: inline;
+  padding: 20px;
 }
 
-.navbar a {
+.main-navigation a {
   color: black;
+  font-family: 'Oswald';
+  font-size: 1.60em;
   text-decoration: none;
 }
 
-.navbar a:hover span { 
-    text-decoration: none;
-    border-bottom: 3px solid #168412; 
+.main-navigation a:hover {
+  color: #333;
+  border-bottom: solid darkgreen 4px;
 }
 
-/* DIRECTIONS */
+@media only screen and (max-width: 1275px) {
+    .main-navigation a {
+      font-size: 1.45em;
+    }
+}
 
-div.directions {
+@media only screen and (max-width: 1200px) {
+    .main-navigation li {
+      padding: 15px;
+    }
+
+    .main-navigation a {
+      font-size: 1.40em;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .main-navigation li {
+      padding: 10px;
+    }
+
+    .main-navigation a {
+      font-size: 1.30em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-navigation li {
+      padding: 8px;
+    }
+
+    .main-navigation a {
+      font-size: 1.20em;
+    }
+}
+
+/* TOGGLE NAVIGATION */
+
+i {
+  visibility: hidden;
+}
+
+.fa.fa-bars.nav-toggle {
+  font-size: 3em;
+  cursor: pointer;
   position: absolute;
-  top: 810px;
-  background-color: #fcfbf2;
-  width: 100%;
-  font-family: 'Oswald';
+  top: 3%;
+  right: 2.5%;
 }
 
-/* FAQS */
+.fa.fa-bars.nav-toggle:hover {
+  color: #555;
+}
 
-div.faqs {
+.fa.fa-times.nav-toggle {
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.toggle-navigation i {
   position: absolute;
-  top: 1465px;
-  background-color: #fcf9e8;
-  width: 100%;
-  font-family: 'Oswald';
-  border-top: 1px solid black;
+  top: 3%;
+  right: 2.5%;
+  font-size: 2.5em;
 }
+
+.toggle-navigation ul {
+  padding: 7.5% 0;
+}
+
+.toggle-navigation li {
+  list-style: none;
+}
+
+.toggle-navigation a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Oswald';
+  font-size: 2em;
+}
+
+.toggle-navigation a:hover {
+  background-color: #777;
+}
+
+.toggle-navigation a.title {
+  border-bottom: solid white 10px;
+  font-size: 2.5em;
+  cursor: none;
+}
+
+.toggle-navigation a.title:hover {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 950px) {
+    .main-navigation {
+      visibility: hidden;
+    }
+
+    i {
+      visibility: visible;
+    }
+
+    .toggle-navigation.open {
+      transform: translateX(0);
+    }
+}
+
+/* SECTIONS */
+
+section {
+  min-height: 100vh;
+  background-color: #F9F4E1;
+}
+
+h1 {
+  margin: 0;
+  padding: 2.5%;
+  font-family: 'Oswald';
+  font-size: 2.5em;
+}
+
