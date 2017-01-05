@@ -216,7 +216,7 @@ section {
 }
 
 .ceremony {
-  font-size: 2.75em;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -226,4 +226,12 @@ section {
 
 .story {
   padding: 0 7.5%;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+iframe {
+  max-width: 100vw;
 }
