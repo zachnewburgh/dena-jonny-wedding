@@ -5,7 +5,23 @@
       <li><a href="#our-story">OUR STORY</a></li>
       <li><a href="#schedule">SCHEDULE</a></li>
       <li><a href="#accommodations">ACCOMMODATIONS</a></li>
-      <li><a href="https://www.zola.com/registry/denaandjonny" target="_blank">REGISTRY</a></li>
+      <li onmouseover="showDropdown()" onmouseout="hideDropdown()">
+        <a>REGISTRY</a>
+      </li>
+    </ul>
+    <ul class="dropdown" id="hover"
+        onmouseover="showDropdown()"
+        onmouseout="hideDropdown()">
+        <li>
+          <a href="https://www.bloomingdales.com/registry/wedding/guest/?perfectProxy=true&registryId=6757188" target="_blank">
+            Bloomingdale's
+          </a>
+        </li>
+        <li>
+          <a href="https://www.zola.com/registry/denaandjonny" target="_blank">
+            Zola
+          </a>
+        </li>
     </ul>
   </nav>
 
@@ -15,14 +31,18 @@
       <i class="fa fa-times nav-toggle" aria-hidden="true" onclick="toggleNav()";"></i>
       <ul>
         <li><a href="#" class="title">DENA & JONNY</a></li>
-        <br><br><br><br><br>
+        <br><br><br>
         <li><a href="#our-story">OUR STORY</a></li>
         <br><br>
         <li><a href="#schedule">SCHEDULE</a></li>
         <br><br>
         <li><a href="#accommodations">ACCOMMODATIONS</a></li>
         <br><br>
-        <li><a href="https://www.zola.com/registry/denaandjonny" target="_blank">REGISTRY</a></li>
+        <li><a class="title" style="font-size: 2em">REGISTRIES</a></li>
+        <br><br>
+        <li><a style="font-size: 1.75em;" href="https://www.zola.com/registry/denaandjonny" target="_blank">BLOOMINGDALE'S</a></li>
+        <br>
+        <li><a style="font-size: 1.75em;" href="https://www.zola.com/registry/denaandjonny" target="_blank">ZOLA</a></li>
       </ul>
     </nav>
   </header>

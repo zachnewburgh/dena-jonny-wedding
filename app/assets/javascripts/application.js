@@ -16,7 +16,16 @@
 //= require_tree .
 
 toggleNav = function() {
-  console.log("bitch")
   var nav = document.getElementsByClassName("toggle-navigation")[0]; 
   nav.classList[1] === "open" ? nav.classList.remove("open") : nav.classList.add("open");
+}
+
+showDropdown = function() {
+  var hover = document.getElementById('hover');
+  hover.style.opacity = "1";
+}
+
+hideDropdown = function() {
+  var hover = document.getElementById('hover');
+  hover.style.opacity = "0";
 }
